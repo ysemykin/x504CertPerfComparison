@@ -11,4 +11,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\x504Cert.Services\x509Cert.Services.csproj" />
+    <ProjectReference Include="..\x509Cert.Models\x509Cert.Models.csproj" />
+  </ItemGroup>
+
 </Project>

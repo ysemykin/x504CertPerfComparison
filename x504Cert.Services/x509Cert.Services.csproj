@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Certs\RootCert.der" />
+    <None Remove="Certs\SubCACert.der" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Certs\RootCert.der">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Certs\SubCACert.der">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\x509Cert.Models\x509Cert.Models.csproj" />
+  </ItemGroup>
+
+</Project>
