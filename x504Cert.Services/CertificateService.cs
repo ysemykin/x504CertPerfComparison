@@ -32,32 +32,6 @@ namespace x509Cert.Services
                     rootCertificate = new X509Certificate2(appPath+"\\Certs\\RootCert.der");
                     subCACertificate = new X509Certificate2(appPath+"\\Certs\\SubCACert.der");
 
-                    //var assembly = Assembly.GetExecutingAssembly();
-
-                    //using (var stream = assembly.GetManifestResourceStream("x509Cert.Services.Certs.RootPilot.der"))
-                    //{
-                    //    if (stream == null)
-                    //    {
-                    //        result.Add(new("inf", "Root pilot certificate not found.", 0));
-                    //    }
-                    //    else
-                    //    {
-                    //        rootCertificate = new X509Certificate2(ReadStream(stream));
-                    //    }
-                    //}
-
-                    //using (var stream = assembly.GetManifestResourceStream("x509Cert.Services.Certs.SubCAValidPilot.der"))
-                    //{
-                    //    if (stream == null)
-                    //    {
-                    //        result.Add(new("inf", "SubCA valid pilot certificate not found.", 0));
-                    //    }
-                    //    else
-                    //    {
-                    //        subCACertificate = new X509Certificate2(ReadStream(stream));
-                    //    }
-                    //}
-
                     chain.Reset();
                     chain.ChainPolicy.CustomTrustStore.Clear();
 
